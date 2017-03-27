@@ -6,10 +6,17 @@ $(document).ready(function() {
   var question3 = $("input#question3").val();
 // set variable to create array
   var inputs = [question1, question2, question3];
+  // create new array for moving elements of original array
+  var cloneInputs = inputs.slice();
+  cloneInputs.push(question1);
+  cloneInputs.shift();
+  cloneInputs.push(question3);
+  cloneInputs.splice(1, 1);
 
-  console.log(inputs);
-
-  // return()
+  // var finalArray = $("cloneInputs").val();
+  // var result = $("cloneInputs").val();
+  $("#result").append("<li>" + cloneInputs + "</li>");
+  // console.log(cloneInputs);
   event.preventDefault();
   });
 });
