@@ -12,11 +12,9 @@ $(document).ready(function() {
   cloneInputs.shift();
   cloneInputs.push(question3);
   cloneInputs.splice(1, 1);
-
-  // var finalArray = $("cloneInputs").val();
-  // var result = $("cloneInputs").val();
-  $("#result").append("<li>" + cloneInputs + "</li>");
-  // console.log(cloneInputs);
+  cloneInputs.forEach(function(cloneInput) {
+    $("#result").append("<li>" + cloneInput + "</li>");
+  });
   event.preventDefault();
   });
 });
